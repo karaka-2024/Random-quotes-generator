@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { RandomQuote } from '../../models/quote'
 import { useRandomQuotes, useAddQuote, useDeleteQuote, useUpdateQuote, useQuoteById } from '../hooks/useRandomQuotes'
+import '../styles/main.css'
 
 export default function RandomQuoteGenerator() {
   const { data: quotes = [], isPending, error, isError } = useRandomQuotes()

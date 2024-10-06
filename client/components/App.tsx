@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export default function Home() {
+export default function App() {
   return (
     <div>
       <h2>Welcome to the Random Quote App</h2>
