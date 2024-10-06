@@ -26,9 +26,10 @@
     ]
   },
   "dependencies": {
-    "express": "^4.17.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
     "knex": "^2.5.1",
-    "sqlite3": "^5.1.6",
+    "sqlite3": "^5.1.7",
     "superagent": "^8.1.2"
   },
   "devDependencies": {
@@ -68,5 +69,7 @@
     "semi": false,
     "singleQuote": true
   },
-  "browserslist": "> 2%, not dead"
+  "browserslist": "> 2%, not dead",
+  "description": "This repo includes:",
+  "author": ""
 }

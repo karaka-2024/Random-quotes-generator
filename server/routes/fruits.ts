@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import * as db from '../db/fruits.ts'
+import * as db from '../db/randomQuotes.ts'
 
 const router = Router()
 
