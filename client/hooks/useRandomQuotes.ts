@@ -3,6 +3,7 @@ import {
   useMutation,
   useQueryClient,
   MutationFunction,
+  UseQueryOptions
 } from '@tanstack/react-query'
 import { RandomQuote } from '../../models/quote.ts'
 import * as API from '../apis/randomQuotes.ts'
@@ -20,6 +21,15 @@ export function useRandomQuotes() {
     delete: useDeleteQuote(),
     add: useAddQuote(),
   }
+}
+
+export function useQuoteById(id: number | null, options?: UseQueryOptions<RandomQuote>) {
+  return useQuery<RandomQuote>({
+    queryKey: ['quotes', id],
+    queryFn: () => API.getRandomQuoteById(id!), 
+    enabled: !!id,
+    ...options,
+  })
 }
 
 export function useQuoteMutation<TData = unknown, TVariables = unknown>(
