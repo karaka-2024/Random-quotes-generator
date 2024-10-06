@@ -1,16 +1,13 @@
-import * as quotes from '../hooks/useRandomQuotes'
+import { Link } from 'react-router-dom'
 
-function App() {
-  const { data } = useFruits()
-
+export default function Home() {
   return (
-    <>
-      <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
-      </div>
-    </>
+    <div>
+      <h2>Welcome to the Random Quote App</h2>
+      <p>Click the button below to view random quotes:</p>
+      <Link to="/quotes">
+        <button>Go to Random Quote Generator</button>
+      </Link>
+    </div>
   )
 }
-
-export default App
