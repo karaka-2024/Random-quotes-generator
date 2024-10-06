@@ -4,6 +4,3 @@ export interface RandomQuotes {
   author: string
 }
 
-export interface FruitData {
-  name: string
-}
