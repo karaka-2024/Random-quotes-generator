@@ -1,7 +1,7 @@
 import express from 'express'
 import * as Path from 'node:path'
 
-import RandomQuoteRoutes from './routes/fruits.ts'
+import RandomQuoteRoutes from './routes/randomQuotes'
 
 const server = express()
 

@@ -19,7 +19,7 @@ export async function addQuote( quote: string, author: string ): Promise<number[
 
 
 // Update an existing task
-export async function updateTask(
+export async function updateQuote(
   id: number, 
   quote: string, 
   author: string 
@@ -28,7 +28,7 @@ export async function updateTask(
 }
 
 // Delete a task
-export async function deleteTask(id: number): Promise<number> {
+export async function deleteQuote(id: number): Promise<number> {
   return db('quotes')
     .where({ id })
     .del()
