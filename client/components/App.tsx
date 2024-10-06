@@ -1,4 +1,4 @@
-import { useFruits } from '../hooks/useFruits.ts'
+import { useFruits } from '../hooks/useRandomQuotes.ts'
 
 function App() {
   const { data: quote, refetch } = useQuery('randomQuote', fetchRandomQuote);

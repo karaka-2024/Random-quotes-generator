@@ -1,14 +1,14 @@
 import connection from './connection.ts'
-import { RandomQuotes } from '../../models/quote.ts'
+import { RandomQuote } from '../../models/quote.ts'
 
 const db = connection
 
-export async function getAllRandomQuotes(): Promise<RandomQuotes[]> {
+export async function getAllRandomQuotes(): Promise<RandomQuote[]> {
   return db('quotes').select()
 }
 
 // Fetch data by ID
-export async function getRandomQuotesById(id: number): Promise<RandomQuotes | undefined> {
+export async function getRandomQuotesById(id: number): Promise<RandomQuote | undefined> {
   return db('quotes').where({ id }).select().first()   
 }
 

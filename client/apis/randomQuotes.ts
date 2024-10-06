@@ -25,7 +25,7 @@ export async function getRandomQuotes(): Promise<RandomQuote[]> {
 }
 
 // Fetch a Quote by ID
-export async function getTaskById(id: number): Promise<RandomQuote> {
+export async function getRandomQuoteById(id: number): Promise<RandomQuote> {
   try {
     const response = await request.get(`${rootUrl}/quotes/${id}`)
     return response.body as RandomQuote
@@ -35,7 +35,7 @@ export async function getTaskById(id: number): Promise<RandomQuote> {
 }
 
 // Add a new quote
-export async function addTask(newQuote: { quote: string, author: string }): Promise<QuoteData> {
+export async function addQuote(newQuote: { quote: string, author: string }): Promise<QuoteData> {
   try {
     const response = await request.post(`${rootUrl}/quotes`).send(newQuote)
     return response.body as QuoteData
